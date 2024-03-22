@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usernames</title>
+</head>
+<body>
+    <h1>All Usernames:</h1>
+    <ul>
+        {% for username in usernames %}
+        <li>{{ username }}</li>
+        {% endfor %}
+    </ul>
+<br>
+<a href="{% url 'home' %}" > Home
+</a>
+</body>
+</html>
