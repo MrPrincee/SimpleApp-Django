@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from django.contrib.auth.models import User
+
+
 def scrap():
     list1 = []
     list2 = []
