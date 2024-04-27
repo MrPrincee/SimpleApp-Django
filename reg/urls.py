@@ -3,6 +3,7 @@ from django.urls import path,include
 from django.http import HttpResponse
 from reg.views.auth import views
 from reg.views.home import views
+from reg.views.mail import views
 from django.contrib import admin
 
 urlpatterns = [
@@ -15,7 +16,9 @@ urlpatterns = [
 
     path('',reg.views.home.views.home, name='home'),
     path('search',reg.views.home.views.search_page,name="search"),
-    path('course_scrap',reg.views.home.views.course_scrap,name='course_scrap')
+    path('course_scrap',reg.views.home.views.course_scrap,name='course_scrap'),
+
+    path("send_mail",reg.views.mail.views.mail_sender,name="mail_sender")
 ]
 
 
