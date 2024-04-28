@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reg',
+    'employeemanager'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            BASE_DIR / 'reg' / 'templates' / 'reg'
+            BASE_DIR / 'reg' / 'templates' / 'reg',
+            BASE_DIR / 'employeemanager' / 'templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -124,3 +126,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '792844df3f250e'
+EMAIL_HOST_PASSWORD = 'd2dc5daa368875'
+EMAIL_PORT = '2525'

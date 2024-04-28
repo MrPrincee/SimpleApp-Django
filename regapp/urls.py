@@ -18,5 +18,6 @@ from django.contrib import admin
 from django.urls import path,include
 
 urlpatterns = [
-    path('', include('reg.urls'))
+    path('', include('reg.urls')),
+    path('employee/',include('employeemanager.urls'))
 ]
