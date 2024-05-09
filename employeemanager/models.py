@@ -7,3 +7,6 @@ class Employee(models.Model):
     salary = models.FloatField()
     rank = models.IntegerField()
     balance = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
