@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+{% for task in tasks %}
+{{task.header}}--{{task.status}}--<br>Task--{{task.task}}<br>{% if task.status == 'Active' %}<form action="{% url 'take_task' task.id %}" method="GET">
+        <button type="submit">Take</button>
+    </form>
+{%else%}
+{% if task.worker == current_user and task.status != 'Finished' %}
+<form action="{% url 'finish_task' task.id %}" method="GET">
+        <button type="submit">Finish</button>
+    </form>
+{%else%}
+{%endif%}
+
+{%endif%}
+<br>
+<br>
+{% endfor %}
+
+<br>
+<a href="{% url 'add_task' %}" > Add Task</a>
+<br>
+<a href="{% url 'home' %}" > Home</a>
+</body>
+</html>

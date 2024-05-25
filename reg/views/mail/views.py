@@ -6,7 +6,7 @@ from django.core.mail import send_mail
 
 
 def mail_sender(request):
-    form = MailForm(request.POST)
+    form = MailForm(request.POST or None)
     if request.method == "POST":
 
         if form.is_valid():

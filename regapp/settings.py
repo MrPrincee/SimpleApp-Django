@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reg',
-    'employeemanager'
+    'employeemanager',
+    'chat',
+    "employeetask"
 ]
 
 MIDDLEWARE = [
@@ -58,7 +60,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             BASE_DIR / 'reg' / 'templates' / 'reg',
-            BASE_DIR / 'employeemanager' / 'templates'
+            BASE_DIR / 'employeemanager' / 'templates',
+            BASE_DIR/'chat'/'templates',
+            BASE_DIR/'employeetask'/'templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {
